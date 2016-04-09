@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.blooddonarapp"
+    android:installLocation="preferExternal"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <intent-filter>
+        <action android:name="android.intent.action.SEND" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+
+        <data android:mimeType="image/*" />
+    </intent-filter>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/iclauncher"
+        android:label="Blood Donor App"
+        android:noHistory="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="Blood Donor App" >
+
+            <!-- ="@string/app_name -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity1"
+            android:label="@string/title_activity_main_activity1" >
+        </activity>
+        <activity
+            android:name=".MainActivity2"
+            android:label="@string/title_activity_main_activity2" >
+        </activity>
+        <activity
+            android:name=".Register"
+            android:label="Register" >
+
+            <!-- title_activity_register -->
+        </activity>
+        <activity
+            android:name=".DonarDetail"
+            android:label="@string/title_activity_donar_detail" >
+        </activity>
+        <activity
+            android:name=".SelectState"
+            android:label="@string/title_activity_select_state" >
+        </activity>
+        <activity
+            android:name=".Menu"
+            android:label="@string/title_activity_menu" >
+        </activity>
+        <activity
+            android:name=".OptionMenu"
+            android:label="@string/title_activity_option_menu" >
+        </activity>
+        <activity
+            android:name=".CallActivity"
+            android:label="@string/title_activity_call" >
+        </activity>
+        <activity
+            android:name=".HelpActivity"
+            android:label="@string/title_activity_help" >
+        </activity>
+        <activity
+            android:name=".About"
+            android:label="@string/title_activity_about"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name=".Reminder"
+            android:label="@string/title_activity_reminder" >
+        </activity>
+        <activity
+            android:name=".InvityFriend"
+            android:label="@string/title_activity_invity_friend" >
+        </activity>
+        <activity
+            android:name=".InviteFriend"
+            android:label="@string/title_activity_invite_friend" >
+        </activity>
+        <activity
+            android:name=".Call"
+            android:label="@string/title_activity_call" >
+        </activity>
+        <activity
+            android:name=".HelpLine"
+            android:label="@string/title_activity_help_line" >
+        </activity>
+
+        <service
+            android:name=".AlarmService"
+            android:enabled="true" />
+
+        <receiver
+            android:name=".AlarmReceiver"
+            android:process=":remote" />
+
+        <activity
+            android:name=".Click_Photo"
+            android:label="Camera" >
+        </activity>
+        <activity
+            android:name=".Find"
+            android:label="Find" >
+        </activity>
+        <activity
+            android:name=".SelectCity"
+            android:label="Find Donar" >
+        </activity>
+        <activity
+            android:name=".Find_ByBloodGroup"
+            android:label="Find Donar" >
+        </activity>
+        <activity
+            android:name=".FindByCity"
+            android:label="Find Blood Bank" >
+        </activity>
+        <activity
+            android:name=".ListOfDonars"
+            android:label="@string/title_activity_list_of_donars" >
+        </activity>
+        <activity
+            android:name=".DonarsList"
+            android:label="Donor list" >
+        </activity>
+        <activity
+            android:name=".ListOfBloodBanks"
+            android:label="List of Blood Banks" >
+        </activity>
+        <activity
+            android:name=".NavigationDrawer"
+            android:label="@string/title_activity_navigation_drawer" >
+        </activity>
+        <activity
+            android:name=".Navigationd"
+            android:label="@string/title_activity_navigationd" >
+        </activity>
+        <activity
+            android:name=".Navigator"
+            android:label="@string/title_activity_navigator" >
+        </activity>
+        <activity
+            android:name=".NavigationBar"
+            android:label="@string/app_name"
+            android:parentActivityName="android.app.ActivityGroup" >
+
+            <!-- title_activity_navigation_bar -->
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.app.ActivityGroup" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FindBloodTestCenters"
+            android:label="Find Blood Test Centers" >
+        </activity>
+        <activity
+            android:name=".DonarListArray"
+            android:label="@string/title_activity_donar_list_array" >
+        </activity>
+        <activity
+            android:name=".Find_donarlist"
+            android:label="Find Donor" >
+        </activity>
+        <activity
+            android:name=".FindByCitylist"
+            android:label="Find Blood Banks" >
+        </activity>
+        <activity
+            android:name=".FabButton"
+            android:label="@string/title_activity_fab_button" >
+        </activity>
+        <activity
+            android:name=".FindBloodTestList"
+            android:label="Blood Test Centers" >
+        </activity>
+        <activity
+            android:name=".Add_Notes"
+            android:label="@string/title_activity_add__notes" >
+        </activity>
+
+        <service
+            android:name=".MyAlarmService"
+            android:enabled="true" />
+
+        <receiver
+            android:name=".ALarmReceiver"
+            android:process=":remote" />
+
+        <activity
+            android:name=".MakeANote"
+            android:label="Add Note" >
+        </activity>
+        <activity
+            android:name=".MoreNotification"
+            android:label="@string/title_activity_more_notification" >
+        </activity>
+        <activity
+            android:name=".FindByBloodnCity"
+            android:label="Find Donor" >
+        </activity>
+        <activity
+            android:name=".FindByBloodGList"
+            android:label="Find Donor" >
+        </activity>
+        <activity
+            android:name=".SMSDonar"
+            android:label="SMS to Donor" >
+        </activity>
+        <activity
+            android:name=".CallOrSms"
+            android:label="Make contact" >
+        </activity>
+        <activity
+            android:name=".NavigationDrawr"
+            android:label="@string/title_activity_navigation_drawr" >
+        </activity>
+    </application>
+
+</manifest>
